@@ -6,6 +6,7 @@ python-dotenv
 psycopg2-binary
 gunicorn
 Flask==2.2.5
+gunicornWerkzeug==2.3.8
 Flask-Login==0.6.2
 Flask-SQLAlchemy==3.0.3
 Flask-SocketIO==5.3.6
