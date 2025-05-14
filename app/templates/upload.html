@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Upload a File</h2>
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" required><br>
+    <button type="submit">Upload</button>
+</form>
+<p>Max size: 100MB. Larger files? <a href="https://www.dropbox.com/scl/fo/mm5f8x63xf91cl5rxjh82/AG1C9IkSGPEGjP_I9jdZtMk?rlkey=tvxs1j794w1zq8123oz77c1s8&st=gcdumu0u&dl=0" target="_blank">Upload to Dropbox</a></p>
+{% endblock %}

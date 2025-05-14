@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>W-YONKOS Forum</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1>W-YONKOS (Web Emperors)</h1>
+        <nav>
+            <a href="{{ url_for('forum') }}">Forum</a>
+            <a href="{{ url_for('upload') }}">Upload</a>
+            <a href="https://www.dropbox.com/scl/fo/mm5f8x63xf91cl5rxjh82/AG1C9IkSGPEGjP_I9jdZtMk?rlkey=tvxs1j794w1zq8123oz77c1s8&st=gcdumu0u&dl=0" target="_blank">Dropbox</a>
+        </nav>
+        <hr>
+    </header>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class="flashes">
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+</body>
+</html>
